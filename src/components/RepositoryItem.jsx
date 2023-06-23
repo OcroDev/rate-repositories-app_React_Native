@@ -8,9 +8,9 @@ import theme from '../theme'
 export const RepositoryItem = ({repository}) => {
   return (
     <View key={repository.id} style={styles.container}>
-        <RepositoryItemHeader repository={repository} />
-        <RepositoryStats repository={repository} />
-      </View>
+      <RepositoryItemHeader repository={repository} />
+      <RepositoryStats repository={repository} />
+    </View>
   )
 }
 

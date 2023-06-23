@@ -11,7 +11,6 @@ export const RepositoryList = () => {
       renderItem={({ item: repository }) => (
         <RepositoryItem repository={repository} />
       )}
-      
     >
     </FlatList>
   )
