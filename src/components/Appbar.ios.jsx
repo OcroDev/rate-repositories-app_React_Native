@@ -45,7 +45,7 @@ export default function AppBar() {
 const styles = StyleSheet.create({
   container: {
     flexDirection:'row',
-    backgroundColor: theme.appBar.primary,
+    backgroundColor: 'blue',
     paddingTop: Constants.statusBarHeight + 10,
     gap: 5,
     

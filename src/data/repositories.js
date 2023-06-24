@@ -1,22 +1,22 @@
 export default [
   {
     id: '1',
-    fullName:'jaredpalmer/formik',
-    description: 'Build forms in React, without the tears',
-    language: 'TypeScript',
-    forksCount: 2999,
-    stargazersCount:21553, 
+    fullName:'midudev/midu.dev',
+    description: 'Blog d enoticias sobre desarollo',
+    language: 'HTML',
+    forksCount: 31111,
+    stargazersCount:529444, 
     ratingAverage:88, 
     reviewCount:4 ,
-    ownerAvatarUrl:'https://avatars2.githubusercontent.com/u/4060187?v=4'
+    ownerAvatarUrl:'https://avatars2.githubusercontent.com/u/1561955?v=4'
   },
   {
     id: '2',
     fullName:'jaredpalmer/formik',
     description: 'Build forms in React, without the tears',
     language: 'TypeScript',
-    forksCount: 1589,
-    stargazersCount:21553, 
+    forksCount: 16589,
+    stargazersCount:215533, 
     ratingAverage:88, 
     reviewCount:4 ,
     ownerAvatarUrl:'https://avatars2.githubusercontent.com/u/4060187?v=4'

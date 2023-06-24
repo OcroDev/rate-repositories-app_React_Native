@@ -4,7 +4,7 @@ import { StyleText } from './StyleText'
 
 
 const parseThousand = (value) => {
-  return value >= 1000 ? `${Math.round(value/1000)}k`: String(value)
+  return value >= 1000 ? `${Math.round(value/1000)/10}k`: String(value)
 }
 
 export function RepositoryStats({repository}) {

@@ -31,7 +31,7 @@ export default function AppBar() {
     <View style={styles.container}>
       <ScrollView horizontal style={styles.scroll}>
         <AppBarTap  to='/' >
-          Repositories
+          Android
         </AppBarTap>
         <AppBarTap to='/signin'>
           Sig in
@@ -45,7 +45,7 @@ export default function AppBar() {
 const styles = StyleSheet.create({
   container: {
     flexDirection:'row',
-    backgroundColor: theme.appBar.primary,
+    backgroundColor: '#008069',
     paddingTop: Constants.statusBarHeight + 10,
     gap: 5,
     

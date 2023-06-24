@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, StyleSheet, View } from 'react-native'
 import { StyleText } from './StyleText'
 import theme from '../theme'
+import { Platform } from 'react-native'
 
 export default function RepositoryItemHeader({repository}) {
   return (
@@ -32,7 +33,11 @@ const styles = StyleSheet.create({
   language: {
     padding: 4, 
     color: theme.colors.white,
-    backgroundColor: theme.colors.primary,
+    backgroundColor: Platform.select({
+      android: theme.colors.primary,
+      ios: 'orange',
+      default:'purple'
+    }),
     alignSelf: 'flex-start',
     borderRadius: 4,
     overflow: 'hidden',
