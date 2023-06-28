@@ -3,11 +3,13 @@ import { Button, StyleSheet, Text, TextInput, View} from 'react-native'
 import {Formik, useField} from 'formik'
 import StyleTextInput from '../components/StyleTextInput'
 import { StyleText } from '../components/StyleText'
+import {loginValidationSchema } from '../validationSchemas/login'
 
 const initialValues = {
   email: '',
   password:'',
 }
+
 
 const styles = StyleSheet.create({
   form: {
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline'
   }
 })
-
+ 
 const FormikInputValue = ({ name, ...props }) => {
   const [field, meta, helpers] = useField(name)
   return (
@@ -41,23 +43,23 @@ const FormikInputValue = ({ name, ...props }) => {
   )
 }
 
-const validate = (values) => {
-  const errors = {}
-  if (!values.email) {
-    errors.email = 'Email is required *'
-  } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(values.email)) {
-    errors.email = 'Invalid email'    
-  }
-  console.log(errors)
-  return errors
-}
+// const validate = (values) => {
+//   const errors = {}
+//   if (!values.email) {
+//     errors.email = 'Email is required *'
+//   } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(values.email)) {
+//     errors.email = 'Invalid email'    
+//   }
+//   console.log(errors)
+//   return errors
+// }
 
 export function LogInPage() {
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={values => console.log(values)}
-      validate={validate}
+      validationSchema={loginValidationSchema}
     >{({handleChange, handleSubmit, values}) => {
         return (
           <View style={styles.form}>
@@ -70,7 +72,7 @@ export function LogInPage() {
               placeholder='Password'
               secureTextEntry />
             <View style={styles.button}>
-              <Button style={styles.button} title='LogIn' onPress={handleSubmit} color={"#999"}/>
+              <Button style={styles.button} title='LogIn' onPress={handleSubmit} color={"#007AFF"}/>
             </View>
             
           </View>

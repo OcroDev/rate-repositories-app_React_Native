@@ -15,3 +15,4 @@ export default function App() {
 }
 
 
+const URI = 'https://github.com/fullstack-hy2020/rate-repository-api'
